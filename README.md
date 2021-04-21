@@ -1,6 +1,8 @@
-# SerieElsa
+# Critique-serie
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.2.6.
+Exercice de validation de 5 jours d'angular, 
+dans le cadre de la formation Conception & développement d'application.
+CRED de serie et de critique
 
 ## Development server
 
