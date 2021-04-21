@@ -1,0 +1,62 @@
+
+<div class="row">
+
+  <div *ngIf="tvShow" class="col-6 card shadow mx-auto" >
+
+    <h4 class="text-center mt-3 text-uppercase">{{tvShow.title}}</h4>
+
+
+    <div class="card mb-3">
+      <img class="card-img-top" src="{{tvShow.picture}}" alt="Image de la série">
+      <div class="card-body">
+        <h5 class="card-title">{{tvShow.title}}</h5>
+        <b>Résumé de la série</b>
+        <p class="card-text">{{tvShow.description}}
+          </p>
+        <b>Critique de la série</b>
+        <p class="card-text">{{tvShow.review}}
+        </p>
+        <p class="card-text"><b>Date de sortie</b><small class="text-muted">{{tvShow.release}}</small></p>
+      </div>
+      <div class="text-center">
+        <a routerLink="/tvShows" class="btn btn-primary">
+          Retourner vers la liste de série</a>
+      </div>
+
+    </div>
+    <div class="container d-flex justify-content-center mt-100 mb-100">
+      <div class="row">
+        <div class="col-md-12">
+          <div class="card">
+            <div class="card-body">
+              <h4 class="card-title">Commentaires de la série</h4>
+            </div>
+
+            <div *ngIf="tvShow.comments.length !== 0">
+            <div *ngFor=" let comment of tvShow.comments" class="comment-widgets m-b-20">
+              <div class="d-flex flex-row comment-row">
+
+                <div class="comment-text w-100">
+                  <h5>{{comment.author}}</h5>
+                  <div class="comment-footer"> <span class="date">{{comment.date}}</span> <span class="action-icons"> <a href="#" data-abc="true"><i class="fa fa-pencil"></i></a> <a href="#" data-abc="true"><i class="fa fa-rotate-right"></i></a> <a href="#" data-abc="true"><i class="fa fa-heart"></i></a> </span> </div>
+                  <p class="m-b-5 m-t-10">{{comment.content}}</p>
+
+            </div>
+
+
+
+            </div>
+            </div>
+
+              <app-comment-form [comment]="comment"
+                                (submitFormReview)="onSubmitNewReviewForm($event)"> </app-comment-form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+
+

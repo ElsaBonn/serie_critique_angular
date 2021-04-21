@@ -1,0 +1,22 @@
+<th scope="row">{{id}}</th>
+<td>{{title}}</td>
+<td>{{release}}</td>
+<td>
+
+  <button class="btn btn-primary mx-1"
+          [routerLink]="['/tvShow', id]">
+    Détails
+  </button>
+  <button class="btn btn-success mx-1"
+          [routerLink]="['/tvShow/', 'edit', id]">
+    Editer
+  </button>
+  <button class="btn btn-danger mx-1"
+          (click)="onClickDeleteBtn()">
+    Supp.
+  </button>
+
+
+
+</td>
+

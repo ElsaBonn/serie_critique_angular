@@ -1,0 +1,45 @@
+<!--auth-view.compoment.html-->
+<div class="row">
+
+  <div class="col-6 card shadow mx-auto">
+
+    <h3 class="text-center mt-3">WELCOME & LOGIN NOW ! </h3>
+
+    <div *ngIf="errMsg" class="alert alert-danger p-2">{{errMsg}}</div>
+
+    <form #authForm="ngForm" (ngSubmit)="onSubmitLogin(authForm)" class="m-3">
+
+      <div class="form-group">
+        <label for="username"> Username </label>
+        <input type="text"
+               class="form-control"
+               id="username"
+               placeholder="Username..."
+               name="username"
+               ngModel
+               required>
+      </div>
+      <div class="form-group">
+        <label for="password"> Password </label>
+        <input type="text"
+               class="form-control"
+               id="password"
+               placeholder="password"
+               name="password"
+               ngModel
+               required
+               minlength="6">
+      </div>
+
+      <div class="text-center">
+        <button type="submit" class="btn btn-dark btn-lg"
+                [disabled]="authForm.invalid">LOG IN
+        </button>
+
+      </div>
+    </form>
+
+
+  </div>
+
+</div>

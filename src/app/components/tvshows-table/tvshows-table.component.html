@@ -1,0 +1,29 @@
+<table class="table">
+  <thead class="thead-dark">
+  <tr>
+    <th scope="col">#</th>
+    <th scope="col">Title</th>
+    <th scope="col">Release Date</th>
+    <th scope="col">Action</th>
+
+
+
+  </tr>
+
+  </thead>
+  <tbody>
+  <tr app-tvshow-table-row
+      *ngFor="let tvShow of tvShows"
+      [id]="tvShow.id"
+      [title]="tvShow.title"
+      [release]="tvShow.release"
+>
+
+  </tr>
+
+
+  </tbody>
+
+
+</table>
+
