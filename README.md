@@ -2,7 +2,7 @@
 
 Exercice de validation de 5 jours d'angular, 
 dans le cadre de la formation Conception & développement d'application.
-CRED de serie et de critique
+CRUD de series et de critiques
 
 ## Development server
 
